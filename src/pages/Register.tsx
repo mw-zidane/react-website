@@ -40,6 +40,7 @@ const Register = () => {
         <input type="password" placeholder="Choose a password" value={password} onChange={e => setPassword(e.target.value)} required />
         <button type="submit">Register</button>
       </form>
+      {error && <div className="modal error-modal">⚠️ {error}</div>}
       {success && <div className="modal success-modal">✅ Registered successfully! Redirecting...</div>}
       <p>Already have an account? <a href="/login">Login here</a></p>
     </div>
